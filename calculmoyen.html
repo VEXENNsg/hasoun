@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:antiquewhite;">
+    <center><H2>MOYENNE CALACULTOR</H2></center>
+    <fieldset style="background-color: khaki;">
+        <legend style="color: rgb(128, 127, 134);">
+            <h3 style="color: brown;">CALCULE DE MOYENNE DE BAC INFO </h3>
+            
+        </legend>
+   
+        <tr>
+            <td>NOTES</td><br>
+           
+                <label for="">TERM</label>
+                <input type="radio" name="tr" id="o"> 1
+                <input type="radio" name="tr" id="t">2
+            </tr>
+            <table border="0" style="color: rgb(71, 35, 108);background-color:darkseagreen;">
+        </tr>
+        <tr><td>MATH</td>
+        <td><input type="text" name="" id="m1">CONTROLE</td>
+        <td><input type="text" name="" id="m2">SYNTHESE</td>
+        <td><input type="text" name="" id="" disabled>/////////////////////</td>
+    <td><input type="text" name="" id="totm" disabled>TOTALE</td>
+  
+<td></td>
+        </tr>
+        <tr>
+            <td>PHYSIQUE</td>
+            <td><input type="text" name="" id="ph1">CONTROLE </td> 
+               <td> <input type="text" name="" id="phtp">TP </td>
+            <td><input type="text" name="" id="ph2">SYNTHESE</td> 
+        <td> <input type="text" name="" id="totph" disabled>TOTALE </td>
+
+        </tr>
+        <tr>
+            <td>PROG</td>
+            <td><input type="text" name="" id="pr1"> CONTROLE</td>
+               <td><input type="text" name="" id="prtp">TP </td>
+                <td><input type="text" name="" id="pr2"> SYNTHESE</td>
+                <td><input type="text" name="" id="totpr" disabled>TOTALE </td>
+                
+        </tr>
+        <tr>
+            <td>
+               STI
+
+        </td>
+        <td> <input type="text" name="" id="s1">STI 1</td>
+           <td> <input type="text" name="" id="stp">TP STI</td>
+            <td><input type="text" name="" id="s2">STI 2</td>
+           <td> <input type="text" name="" id="tots" disabled></td>
+
+    </tr>
+    <tr>
+        <td>FRANCAIS</td>
+        <td> <input type="text" name="" id="fr1">CONTROLE</td>
+          <td>  <input type="text" name="" id="fror">ORALE</td>
+        <td> <input type="text" name="" id="fr2">SYNTHESE</td>
+    <td><input type="text" name="" id="totfr" disabled>TOTALE</td>
+    </tr>
+    <tr>
+        <td>ENGLAIS</td>
+        <td><input type="text" name="" id="en1"> CONTROLE</td>
+        <td> <input type="text" name="" id="enor"> ORALE</td>
+    <td><input type="text" name="" id="en2"> SYNTHESE</td>
+        <td> <input type="text" name="" id="toten" disabled> TOTALE</td>
+    </tr>
+    <tr>
+        <td>ARABIC</td>
+        <td><input type="text" name="" id="ar1">SYNTHESE</td>
+    <td> <input type="text" name="" id="aror">ORALE</td>
+    <td><input type="text" name="" id="" disabled>/////////////////////</td>
+<td> <input type="text" name="" id="totar" disabled>TOTALE </td>
+
+    </tr>
+    <tr>
+        <td>DEUTSCH</td>
+        <td><input type="text" name="" id="dc1">CONTROLE</td>
+    <td><input type="text" name="" id="dcor">ORALE</td>
+<td> <input type="text" name="" id="dc2">SYNTHESE</td>
+<td> <input type="text" name="" id="totdc" disabled>TOTALE</td>
+    </tr>
+    <tr>
+        <td>PHILOSOPHYE</td>
+        <td><input type="text" name="" id="ps1">CONTROLE</td>
+    <td><input type="text" name="" id="psor">ORALE</td>
+<td>  <input type="text" name="" id="ps2">SYNTHESE</td>
+<td>  <input type="text" name="" id="totps" disabled>TOTALE</td>
+    </tr>
+    <tr>
+        <td>SPORT</td>
+        <td><input type="text" name="" id="sp1">TEST1</td>
+    <td> <input type="text" name="" id="sp2">TEST 2</td>
+<td> <input type="text" name="" id="totsp" disabled>TOTALE</td>
+    </tr>
+    <tr*>
+        
+        <td colspan="2">TOTALE</td>
+        <td></td>
+        <td></td>
+        <td><input type="text" name="" id="tt" disabled>TOTALE DES NOTES</td>
+    </tr>
+    <tr>
+        
+        <td>
+            <h4>RSULTAT</h4>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+            <td><input type="text" name="" id="res" disabled>RESULTAT</td>
+       
+    </tr>
+  
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><input type="reset" value="annuler">
+        <input type="submit" value="calculer" onclick="calcul()"></td>
+    </tr>
+
+   
+        
+
+    </fieldset>
+
+
+
+
+ </table> 
+ 
+ <script>
+    function calcul(){
+        
+
+    
+    m1=document.getElementById("m1").value;
+    m2=document.getElementById("m2").value;
+    totm=document.getElementById("totm").value=(Number(m1)+(Number(m2)*2))/3;
+
+    ph1=document.getElementById("ph1").value;
+    ph2=document.getElementById("ph2").value;
+    phtp=document.getElementById("phtp").value;
+    totph=document.getElementById("totph").value=(((Number(ph1)+Number(phtp))/2)+(Number(ph2)*2))/3;
+
+    fr1=document.getElementById("fr1").value;
+    fror=document.getElementById("fror").value;
+    fr2=document.getElementById("fr2").value;
+    totfr=document.getElementById("totfr").value=((Number(fr1)+Number(fror))/2+(Number(fr2)*2))/3;
+
+    ar1=document.getElementById("ar1").value;
+    aror=document.getElementById("aror").value;
+    totar=document.getElementById("totar").value=(Number(aror)+Number(ar1)*2)/3;
+
+    ps1=document.getElementById("ps1").value;
+    ps2=document.getElementById("ps2").value;
+    psor=document.getElementById("psor").value;
+    totps=document.getElementById("totps").value=((Number(ps1)+Number(psor))/2+(Number(ps2)*2))/3;
+
+    en1=document.getElementById("en1").value;
+    enor=document.getElementById("enor").value;
+    en2=document.getElementById("en2").value;
+    toten=document.getElementById("toten").value=((Number(en1)+Number(enor))/2+(Number(en2)*2))/3;
+
+    dc1=document.getElementById("dc1").value;
+    dcor=document.getElementById("dcor").value;
+    dc2=document.getElementById("dc2").value;
+    totdc=document.getElementById("totdc").value=((Number(dc1)+Number(dcor))/2+(Number(dc2)*2))/3;
+
+    pr1=document.getElementById("pr1").value;
+    prtp=document.getElementById("prtp").value;
+    pr2=document.getElementById("pr2").value;
+    totpr=document.getElementById("totpr").value=((Number(pr1)+Number(prtp))/2+(Number(pr2)*2))/3;
+
+    s1=document.getElementById("s1").value;
+    stp=document.getElementById("stp").value;
+    s2=document.getElementById("s2").value;
+    tots=document.getElementById("tots").value=((Number(s1)+Number(stp))/2+(Number(s2)*2))/3;
+
+    sp1=document.getElementById("sp1").value;
+    sp2=document.getElementById("sp2").value;
+    totsp=document.getElementById("totsp").value=(Number(sp1)+(Number(sp2)*2))/3;
+
+    o=document.getElementById("o").checked
+    t=document.getElementById("t").checked
+    tt=document.getElementById("tt").value;
+    if(!o &&!t){
+        alert("choisir le trimestre")
+        return false
+    }
+    if(isNaN(m1) || m1==""||isNaN(m2) || m2==""){
+        alert("note de  math invalide")
+        return false;
+    }
+    if(isNaN(ph1) || ph1=="" || isNaN(phtp) || phtp==""|| isNaN(ph2) || ph2==""){
+        alert("note de physique  invalide")
+        return false;
+    }
+    if(isNaN(pr1) || pr1==""||isNaN(prtp) || prtp==""||isNaN(pr2) || pr2==""){
+        alert("note de prog invalide")
+        return false;
+    }
+
+    if(isNaN(s1) || s1==""||isNaN(stp) || stp==""||isNaN(s2) || s2==""){
+        alert("note de sti invalide")
+        return false;
+    }
+  
+    if(isNaN(fr1) || fr1==""|| isNaN(fror) || fror==""|| isNaN(fr2) || fr2==""){
+        alert("note de francais  invalide")
+        return false;
+    }
+  
+   
+    if(isNaN(en1) || en1==""||isNaN(enor) || enor==""||isNaN(en2) || en2==""){
+        alert("note d englais  invalide")
+        return false;
+    }
+    if(isNaN(ar1) || ar1=="" || isNaN(aror) || aror=="" ){
+        alert("note d arabic  invalide")
+        return false;
+    }
+    if(isNaN(dc1) || dc1==""||isNaN(dcor) || dcor==""||isNaN(dc2) || dc2==""){
+        alert("note de deutsch  invalide")
+        return false;
+    }
+    if(isNaN(ps1) || ps1==""||isNaN(psor) || psor==""||isNaN(ps2) || ps2==""){
+        alert("note de philo invalide")
+        return false;
+    }
+    if(isNaN(sp1) || sp1==""||isNaN(sp2) || sp2==""){
+        alert("note de sport invalide")
+        return false;
+    }
+    if(!t){
+  tt=document.getElementById("tt").value=totm*3+(totph*3)+(totpr*3)+(tots*3)+totfr+toten+totdc+totsp+totps
+  res=document.getElementById("res").value=tt/17;
+    }
+    if(!o){
+        tt=document.getElementById("tt").value=(totm*3)+(totph*2)+(totpr*3)+(tots*3)+totfr+toten+totsp+totps
+        res=document.getElementById("res").value=(tt+(totdc-10))/15
+
+    }
+
+}
+ </script>
+</body>
+</html>
